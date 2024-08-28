@@ -1,4 +1,6 @@
 import random
+
+#TAKING CHARACTERS 
 letters=list('abcdefghijklmnopqrstuvwxyz')
 numbers=list('0123456789')
 symbols=list('~!@#$%^&*')
@@ -8,13 +10,15 @@ symbols=list('~!@#$%^&*')
 
 print("Welcome to the Password Generator !") 
 
+#TAKING INPUT FROM THE USER
 n_letters=int(input("How many letters would you like in your password ?"))
 n_symbols=int(input("How many symbols would you like in your password ?"))
 
 
 
-n_numbers=int(input("How many numbers would you like in your password ?"))
+n_numbers=int(input("How many numbers would you like in your password ?")) 
 password_list=[]
+
 for i in range(1,n_letters+1):
   char=random.choice(letters)
   password_list+=char
@@ -30,6 +34,8 @@ random.shuffle(password_list)
 password=""
 for i in password_list:
   password+=i
+
+#PRINTING PASSWORD
 print(password)
 
 
